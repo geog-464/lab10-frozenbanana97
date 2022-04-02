@@ -1,3 +1,5 @@
 
 
 prep/
+.unotes/templates/title_date.hbs
+.unotes/unotes_meta.json

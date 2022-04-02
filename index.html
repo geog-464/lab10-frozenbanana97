@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>lab9</title>
+        <title>lab10</title>
         
 		<!--put your external stylesheet links here-->
 		<link rel="stylesheet" href="css/styles.css">
@@ -18,14 +18,30 @@
     <body>
         <!--put your initial page content here-->
 		<div id="div1">
+			<p>
+				1. Check the layers!<br><br>
+				2. The styleAll function is declaring all sorts of styling attributes, it contains colours, geometries, opacity, radius (size) and more!<br>
+				   The conditional statement is saying that if a feature is a point, then style it with these attributes. The newly styled features (in this case teh markers for Amtrak stations) get returned in the new style as described in the function.<br><br>
+				3. The blue are Canadian stations!<br><br>
+				4. feature is the actual geojson feature that contains all of the data of each station (they are features).<br>
+				   layer is waht is being rendered, its all of the styling of the features.<br><br>
+				5. layer.options.fill is a boolean, returning true or false; whereas layer.getLatLng() fetches the numerical values of the latitude and longitude.<br><br>
+				6. There is no more fill in any of the circles!!!! And they're HUGE!
+
+			</p>
 		</div>
+		<select class="li-nav" name="mapdropdown" id="mapdropdown" onChange="loadMap(this.value);" >
+			<option value="map0" selected="selected" disabled>Load a map</option>
+			<option value='mapa'>Map A</option>
+			<option value='mapb'>Map B</option>
+		</select>
 		<div id="mapdiv">
 			
 		</div>
 		
         <!--you can also use this space for internal scripts; you would place these within <script> tags-->
-
-        
+			
+		        
 		
 		<!--put your external script links here-->
         <script type="text/javascript" src="js/main.js"></script>

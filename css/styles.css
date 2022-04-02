@@ -3,9 +3,9 @@ body {
 }
 
 #div1 {
-    height: 200px;
+    height: auto;
 	width: 80%;
-	padding: 10px;
+	padding: 5px;
     margin: 0 auto;
 	background-color: cyan;
     border-style: solid;
@@ -14,5 +14,12 @@ body {
 }
 
 #mapdiv {
-	height: 480px;
+	height: 600px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+#mapdropdown {
+	position: relative;
+	left: 10%;
 }

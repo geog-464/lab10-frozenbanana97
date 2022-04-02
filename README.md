@@ -2,7 +2,7 @@
 
 The goal of this lab is to have you create a basic web atlas. The distinction we are making here between a simple map and atlas refers to the fact that our web atlas will allow the user to toggle and reload different data layers. 
 
-This lab will also introduce you to event handling, which allow you to attach functionality to existing DOM elements and trigger specific changes on the webpage when the event occurs.
+This lab will also introduce you to event handlers, which allow you to attach functionality to existing DOM elements and trigger specific changes on the webpage when the event occurs.
 
 Refer to the previous lab for help with setting up your workspace.
 
@@ -47,7 +47,7 @@ We will start by passing two built-in *options* recognized by the *geoJson* meth
 - Add the following JS object as an additional parameter in the *L.geoJson* function call, directly following the *json* argument: `{style: styleAll, pointToLayer: generateCircles}`.
 - Elsewhere in your script file, declare the functions you're calling (use template below, and make sure your functions are declared before they are called!):
 
-```javascript
+```
 function generateCircles(feature, latlng) {
 	return L.circleMarker(latlng);
 }
@@ -73,7 +73,7 @@ function styleAll(feature, latlng) {
 
 Notice you are accessing an element found in your GeoJSON data here (accessible from the default *feature* parameter)... what else could you access here? Notice our *generateCircles* function gets passed 2 parameters from [*pointToLayer*](https://leafletjs.com/SlavaUkraini/reference.html#geojson-pointtolayer), and adds a [circleMarker](https://leafletjs.com/SlavaUkraini/reference.html#circlemarker) for every latlng (a leaflet object that contains coordinates). You can do a lot with this...
 
-- paste a `console.log()` statement at the top of your *styleAll* function so that it prints the ZIP codes and reload your page. You can access the data's ZIP code values inside the feature object... Observe the ZIP codes in your inspector console (you might want to look at the link to your raw data on Github again...)
+- paste a `console.log()` statement at the top of your *styleAll* function so that it prints the ZIP codes and reload your page. Observe the ZIP codes in your inspector console (you might want to look at the link to your raw data on Github again...)
 
 - 📝 [Q3] Add a conditional statement to your *styleAll* function that will style the *fillColor* of features containing a Canadian postal code. Use the colour 'cyan' instead of '#fff' for these.
 
@@ -87,7 +87,7 @@ As you can see, like the other functions we've been adding, you have access to a
 
 - 📝 [Q4] What is *feature* and what is *layer* here? What do they refer to?
 
-- Add the next few lines inside your *addPopups* function (this is just an exercise):
+- Add the next few lines inside your *bindPopup* function (this is just an exercise):
 ```javascript
 console.log(layer._radius)
 console.log(layer.options.fill)
@@ -147,4 +147,6 @@ Good luck debugging!
 
 All answered questions inside your *index.html* (2 points each) and a functioning webmap that contains the data, styles and functionalities according to the modifications made throughout the lab (tilesets, styles, popups, map loading dropdown etc.). Each of these enhancements is graded separately based on completion and functionality (1,1,2,4 points respectively).
 
-Make sure your repo is deployed as a Github page, or your lab will not be graded! 
+# Additional resources
+
+- [Using GeoJSON with Leaflet](https://leafletjs.com/SlavaUkraini/examples/geojson/), in which they load GeoJSON locally as done in a previous lab.
