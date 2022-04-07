@@ -49,13 +49,13 @@ function loadMap(mapid){
 			,zoom: 4
 			,maxZoom: 18
 			,minZoom: 2
-			,layers: CartoDB_Positron
+			,layers: OpenStreetMap_HOT
 		});
 	
 		//add the basemap style(s) to a JS object, to which you could also add other baselayers. This object is loaded as a basemap selector as seen further down
 		let baseLayers = {
-			"CartoDB": CartoDB_Positron,
 			"OSM": OpenStreetMap_HOT,
+			"CartoDB": CartoDB_Positron,
 			"Pioneer": Thunderforest_Pioneer,
 			"Night": NASAGIBS_ViirsEarthAtNight2012
 			//,...
@@ -86,8 +86,8 @@ function loadMap(mapid){
 		
 			//add the basemap style(s) to a JS object, to which you could also add other baselayers. This object is loaded as a basemap selector as seen further down
 			let baseLayers = {
-				"CartoDB": CartoDB_Positron,
 				"OSM": OpenStreetMap_HOT,
+				"CartoDB": CartoDB_Positron,
 				"Pioneer": Thunderforest_Pioneer,
 				"Night": NASAGIBS_ViirsEarthAtNight2012
 				//,...
@@ -181,4 +181,4 @@ function addPopups(feature, layer){
 	}
 }
 
-//window.onload = initialize();
+// window.onload = initialize();
